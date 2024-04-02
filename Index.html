@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Background Color</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s ease-in-out; /* تغییر رنگ با انیمیشن */
+  }
+</style>
+</head>
+<body>
+<script>
+  function changeBackgroundColor() {
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16); /* تولید رنگ تصادفی */
+    document.body.style.backgroundColor = randomColor; /* تغییر رنگ بک‌گراند */
+    setTimeout(changeBackgroundColor, 2000); /* فراخوانی تابع هر دو ثانیه */
+  }
+  changeBackgroundColor(); /* شروع تغییر رنگ بک‌گراند */
+</script>
+</body>
+</html>
 
